@@ -3,6 +3,7 @@ var app = express();
 
 app.use(express.static('public'));
 
+
 app.get('/', function(request, response) {
     response.send('Testing');
 });
