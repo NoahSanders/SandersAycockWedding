@@ -12,14 +12,19 @@
     <title>Justified Nav Template for Bootstrap</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-touch.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="dependencies/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="dependencies/style.css" rel="stylesheet">
-    <script src="dependencies/angular-carousel.min"></script>
+    <script src="js/scripts.js"></script>
+    <script src="dependencies/angular-carousel.min.js"></script>
+    <link href="dependencies/angular-carousel.css" rel="stylesheet">
+    
   </head>
 
-  <body ng-app>
+  <body ng-app="wedding">
       <!--Navigation -->
     <div class="container">
       <div class="masthead">
@@ -37,10 +42,11 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
+        <h2>Pictures should be here</h2>
         <div ng-controller="ImageCarouselController">
           <ul rn-carousel class="image">
-            <li ng-repeat="image in images">
-              <div class="layer" ng-src="{{ image }}"></div>
+            <li ng-repeat="pic in images">
+              <div class="layer" ng-src="{{ pic }}"></div>
             </li>
           </ul>
         </div>
@@ -72,9 +78,5 @@
       </footer>
 
     </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
